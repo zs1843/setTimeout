@@ -26,12 +26,6 @@ var validate = debounce(function(e) {
 // 绑定监听
 document.querySelector("input").addEventListener('input', validate);
 
-
-
-<div id='panel' style="background:red;width:200px;height:200px">
- 
- </div>
- 
  function throttle(fn, threshhold) {
  var timeout
  var start = new Date;
