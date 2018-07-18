@@ -29,6 +29,18 @@
         loop(i);
     }
 
+
+    const sleep = (timeountMS) => new Promise((resolve) => {
+        setTimeout(resolve, timeountMS);
+    });
+    
+    (async () => {
+    for (var i = 0; i < 5; i++) {
+        await sleep(1000);
+        console.log(new Date, i);
+    }
+    })();
+
 ```
 
 ```js
@@ -77,6 +89,7 @@
 
 ```
 
+- 执行顺序
 
 ```js
 
@@ -123,7 +136,6 @@ var validate = debounce(function(e) {
     console.log("change", e.target.value, new Date-0)
 }, 380);
  
-// 绑定监听
 document.querySelector("input").addEventListener('input', validate);
 
 ```
